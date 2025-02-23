@@ -1,0 +1,12 @@
+
+.about-body {
+    padding-top: 90px; /* Adjust this based on navbar height */
+    background-color: black;
+  }
+  .about-container {
+    background-color: rgba(128, 128, 128, 0.5); /* Grey with 50% opacity */
+    border-radius: 20px;
+    max-height: 500px; /* Adjust as needed */
+    margin: auto; /* Center it */
+    padding: 20px; /* Adjust padding */
+  }

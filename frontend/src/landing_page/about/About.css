@@ -1,0 +1,78 @@
+
+  .why-choose-us {
+    background-color: rgba(128, 128, 128, 0.5);
+    color: #fff;
+    position: relative;
+    text-align: center;
+    
+  }
+  .whycont{
+    color: #FFF;
+    font-weight: bold;
+    
+  }
+  
+  .about-bg {
+    font-size: 120px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.05);
+    
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    white-space: nowrap;
+  }
+  
+  .text-gold {
+    color: #c9a33b;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .text-muted {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .text-gold {
+    color: #c9a33b;
+    font-weight: bold;
+  }
+  
+  .btn-gold {
+    background-color: #c9a33b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-gold:hover {
+    background-color: #a8832a;
+  }
+  
+  .info-box {
+    color: black;
+    background-color: rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .satisfaction-box {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .heart-icon {
+    font-size: 24px;
+    color: red;
+    margin-right: 10px;
+  }
+  
