@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="container-fluid position-relative">
       <div className="parent-container">
       <img
-        src={`${process.env.PUBLIC_URL}media/images/serving.webp`}
+        src={`${process.env.PUBLIC_URL}/media/images/serving.webp`}
         alt="Background"
         className="hero-bg"
       />
