@@ -14,6 +14,8 @@ import Veg from "./landing_page/menu/Veg";
 import NonVeg from "./landing_page/menu/NonVeg";
 import ScrollToTop from "./ScrollToTop";
 import Popup from "./landing_page/PopUp";
+import { HashRouter } from "react-router-dom";
+
 
 
 
@@ -59,7 +61,7 @@ import Popup from "./landing_page/PopUp";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+<HashRouter>
+  <App />
+</HashRouter>
 );
