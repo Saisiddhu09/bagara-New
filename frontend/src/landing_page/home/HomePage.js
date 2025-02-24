@@ -5,6 +5,7 @@ import Menu from './Menu'
 import Feedback from './Feedback'
 import Footer from '../Footer'
 import Stats from '../Stats'
+import './home.css'
 
 const HomePage = () => {
   return (

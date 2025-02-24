@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './Stats.css';
+import "./Stats.css";
 
 const statsData = [
   { icon: "👨‍🍳", number: 30, label: "Professional Chefs" },
@@ -14,19 +14,20 @@ const Counter = ({ target }) => {
   useEffect(() => {
     let start = 0;
     const duration = 2000; // 2 seconds
-    const increment = Math.ceil(target / (duration / 10));
-
-    const updateCounter = () => {
+    const steps = 50; // Total updates
+    const increment = Math.ceil(target / steps);
+    
+    const interval = setInterval(() => {
       start += increment;
       if (start >= target) {
         setCount(target);
-        return;
+        clearInterval(interval);
+      } else {
+        setCount(start);
       }
-      setCount(start);
-      requestAnimationFrame(updateCounter);
-    };
+    }, duration / steps);
 
-    requestAnimationFrame(updateCounter);
+    return () => clearInterval(interval);
   }, [target]);
 
   return <span>{count.toLocaleString()}</span>;
@@ -34,15 +35,9 @@ const Counter = ({ target }) => {
 
 const Stats = () => {
   return (
-    <div 
-      className="stats-container mt-2 mb-2"
-      style={{
-        backgroundImage: `url(${process.env.PUBLIC_URL}/media/images/background_image_home1_counter.png)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <div className="stats-container mt-2 mb-2">
+    
+      
       {statsData.map((stat, index) => (
         <div key={index} className="stat-box">
           <div className="stat-icon">{stat.icon}</div>
