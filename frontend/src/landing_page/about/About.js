@@ -28,7 +28,7 @@ const About = () => {
         </div>
         <div className="col-md-6 d-flex align-items-center">
           <div className="info-box p-4 bg-light rounded">
-            <img src="/media/images/about-us.webp" alt="Delicious Food" className="img-fluid rounded" />
+            <img src={`${process.env.PUBLIC_URL}/media/images/about-us.webp`} alt="Delicious Food" className="img-fluid rounded" />
             <ul className="mt-3 list-unstyled">
               <li>✔ Good Food & Beverages</li>
               <li>✔ Professionals & Skilled Chefs</li>

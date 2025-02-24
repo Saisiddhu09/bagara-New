@@ -11,7 +11,7 @@ const AboutSection = () => {
    <div style={{ position: "relative", minHeight: "100vh" }}>
       {/* Background Image */}
       <img 
-        src="/media/images/about.webp" 
+        src={`${process.env.PUBLIC_URL}/media/images/about.webp`}
         alt="Background" 
         style={{
           position: "absolute",

@@ -12,7 +12,7 @@ const Footer = () => {
           {/* Left Section - About */}
           <div className="col-md-4 text-center text-md-start">
             <img
-              src={`${process.env.PUBLIC_URL}media/images/logo.png`}
+              src={`${process.env.PUBLIC_URL}/media/images/logo.png`}
               alt="Sri Sai Caterers"
               style={{ maxWidth: "150px" }}
             />

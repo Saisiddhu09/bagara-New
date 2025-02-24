@@ -9,7 +9,7 @@ const Menu = () => {
       <Link to="/menu/veg" className="text-decoration-none text-center">
         <div className="position-relative border border-secondary border-dashed rounded-circle overflow-hidden" style={{ width: "300px", height: "300px" }}>
           <img
-            src={`${process.env.PUBLIC_URL}media/images/veg.webp`}
+            src={`${process.env.PUBLIC_URL}/media/images/veg.webp`}
             alt="Veg Menu"
             className="w-100 h-100 object-fit-cover transition-transform"
             style={{ transition: "transform 0.3s ease-in-out" }}
@@ -24,7 +24,7 @@ const Menu = () => {
       <Link to="/menu/nonveg" className="text-decoration-none text-center">
         <div className="position-relative border border-secondary border-dashed rounded-circle overflow-hidden" style={{ width: "300px", height: "300px" }}>
           <img
-            src={`${process.env.PUBLIC_URL}media/images/biryani.webp`}
+            src={`${process.env.PUBLIC_URL}/media/images/biryani.webp`}
             alt="Non-Veg Menu"
             className="w-100 h-100 object-fit-cover transition-transform"
             style={{ transition: "transform 0.3s ease-in-out" }}
