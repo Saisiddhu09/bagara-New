@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle menu function
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Close menu when clicking a nav link
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3 py-0 fixed-top">
       <div className="container-fluid">
-        {/* 1. Brand/Logo on the left */}
-        <Link className="navbar-brand" to="/">
+        {/* Brand/Logo */}
+        <Link className="navbar-brand" to="/" onClick={closeMenu}>
           <img
             src={`${process.env.PUBLIC_URL}/media/images/logo.PNG`}
             alt="Logo"
@@ -15,42 +27,40 @@ const Navbar = () => {
           />
         </Link>
 
-        {/* 2. Hamburger menu toggler on the right (small screens) */}
+        {/* Hamburger Menu */}
         <button
-          className="navbar-toggler ms-auto" 
+          className={`navbar-toggler ms-auto ${isOpen ? "" : "collapsed"}`}
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
+          onClick={toggleMenu}
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
+          aria-expanded={isOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* 3. Navbar links (collapsible) */}
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          {/* Use justify-content-center to center nav items horizontally */}
+        {/* Navbar Links */}
+        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto text-center gap-4">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">
-                Home <span className="visually-hidden">(current)</span>
+              <Link className="nav-link active" to="/" onClick={closeMenu}>
+                Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link" to="/about" onClick={closeMenu}>
                 About Us
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/menu">
+              <Link className="nav-link" to="/menu" onClick={closeMenu}>
                 Menu
               </Link>
             </li>
             <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
-                to="/services"
+                to="#"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -60,16 +70,16 @@ const Navbar = () => {
                 Services
               </Link>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item" to="#" onClick={closeMenu}>
                   Wedding Catering
                 </Link>
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item" to="#" onClick={closeMenu}>
                   Birthday Party Catering
                 </Link>
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item" to="#" onClick={closeMenu}>
                   Cultural Event Catering
                 </Link>
-                <Link className="dropdown-item" to="#">
+                <Link className="dropdown-item" to="#" onClick={closeMenu}>
                   House Warming Catering
                 </Link>
               </div>

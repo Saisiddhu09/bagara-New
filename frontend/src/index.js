@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./landing_page/home/HomePage";
 import AboutSection from "./landing_page/about/AboutSection";
 import MenuSection from "./landing_page/menu/MenuSection";
@@ -31,7 +31,9 @@ import { HashRouter } from "react-router-dom";
       }, 10000);
   
       return () => clearTimeout(timer); // Cleanup previous timer if pathname changes
+      // eslint-disable-next-line
     }, [location.pathname]); // Runs only when pathname changes// Runs on every route change
+   
 
   return (
     <div className="app-container">

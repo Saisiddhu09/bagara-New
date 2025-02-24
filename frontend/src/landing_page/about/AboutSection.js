@@ -2,8 +2,6 @@ import React from 'react'
 import About from './About'
 import Stats from '../Stats'
 import Review from './Review'
-import Navbar from '../Navbar'
-import Footer from '../Footer'
 
 const AboutSection = () => {
   return (
