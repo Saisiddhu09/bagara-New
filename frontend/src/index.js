@@ -16,20 +16,20 @@ import ScrollToTop from "./ScrollToTop";
 import Popup from "./landing_page/PopUp";
 
 
-const App = () => {
-  const location = useLocation();
-  const [showPopup, setShowPopup] = useState(false);
 
-  useEffect(() => {
-    const timerr = setTimeout(()=>{
+  const App = () => {
+    const location = useLocation();
+    const [showPopup, setShowPopup] = useState(false);
+  
+    useEffect(() => {
+      if (showPopup) return; // Prevent setting another timeout if a popup already exists
+  
+      const timer = setTimeout(() => {
         setShowPopup(true);
-
-    },3000)
-    
-    
-
-    
-  },[location.pathname]); // Runs on every route change
+      }, 10000);
+  
+      return () => clearTimeout(timer); // Cleanup previous timer if pathname changes
+    }, [location.pathname]); // Runs only when pathname changes// Runs on every route change
 
   return (
     <div className="app-container">

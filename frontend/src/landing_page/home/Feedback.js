@@ -20,7 +20,7 @@ const Feedback = () => {
           <div className="d-flex justify-content-center gap-5 mt-5">
             <div className="col-6">
               <img
-                src="/media/images/chef.webp"
+                 src={`${process.env.PUBLIC_URL}media/images/chef.webp`}
                 alt="Vegetarian Dish"
                 className="img-fluid rounded shadow-lg"
                 style={{ width: "60%", objectFit: "cover" }}

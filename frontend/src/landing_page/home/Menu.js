@@ -35,7 +35,7 @@ const Menu = () => {
         <div className="media-container d-flex justify-content-center align-items-center gap-4 mt-3 flex-wrap">
           {/* Left Image */}
           <img
-            src="/media/images/veg.webp"
+            src={`${process.env.PUBLIC_URL}media/images/veg.webp`}
             alt="Vegetarian Dish"
             className="img-fluid rounded shadow-lg"
             
@@ -43,7 +43,7 @@ const Menu = () => {
 
           {/* Center Image */}
           <img
-            src="/media/images/Biryani.webp"
+            src={`${process.env.PUBLIC_URL}media/images/Biryani.webp`}
             alt="Main Dish"
             className="img-fluid rounded shadow-lg"
           mt

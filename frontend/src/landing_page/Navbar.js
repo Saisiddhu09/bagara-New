@@ -9,7 +9,7 @@ const Navbar = () => {
         {/* 1. Brand/Logo on the left */}
         <Link className="navbar-brand" to="/">
           <img
-            src="media/images/logo.png"
+            src={`${process.env.PUBLIC_URL}media/images/logo.png`}
             alt="Logo"
             style={{ width: "140px", maxHeight: "60px", objectFit: "contain" }}
           />
