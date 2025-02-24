@@ -22,7 +22,7 @@ body, html {
   z-index: 1;
   width: 100%;
   padding: 100px 0;
-  padding-bottom: 200px;
+  padding-bottom: 0;
 }
 
 
@@ -30,7 +30,7 @@ body, html {
 @media (max-width: 768px) {
   .container {
     max-width: 100% !important; /* Ensure full width */
-    padding: 100px 15px; /* Add some spacing */
+    padding-top: 100px 15px; /* Add some spacing */
    
   }
   .row {

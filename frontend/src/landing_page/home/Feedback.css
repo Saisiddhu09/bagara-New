@@ -1,0 +1,41 @@
+/* General Styling */
+.menu-container {
+    text-align: center;
+    
+  }
+  
+  /* Image Styling */
+  .img-fluid {
+    width: 100%;
+    max-width: 600px; /* Ensures a reasonable size on larger screens */
+    object-fit: cover;
+  }
+  .text-container{
+    color: white;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .d-flex {
+      flex-direction: column; /* Stack images vertically */
+      align-items: center;
+      gap: 20px; /* Add spacing */
+    }
+    .menu-container{
+        padding-top: 500px;
+    }
+  
+    .col-6 {
+      width: 100%; /* Make both divs take full width */
+      text-align: center;
+    }
+  
+    .img-fluid {
+      width: 90%; /* Reduce width slightly for better spacing */
+    }
+  
+    .text-start {
+      text-align: center !important;
+    }
+  }
+  

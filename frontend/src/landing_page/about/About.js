@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <div className="pt-4 mt-3">
-<section className="why-choose-us container mt-5">
+    <div className="pt-4  mt-3">
+<section className="why-choose-us bg-dark bg-opacity-50 container mt-5">
   <div className="whycont ">
   <h2 className="text-center mt-5">WHY CHOOSE US</h2>
-  <p className="text-center text-muted">Because we believe good food builds good relations</p>
+  <p className="text-center ">Because we believe good food builds good relations</p>
 
   </div>
       

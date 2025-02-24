@@ -3,7 +3,7 @@ import './About.css'
 
 const About = () => {
   return (
-    <div className="about-container text-center mt-2 text-white">
+    <div className="about-container bg-dark bg-opacity-50 text-center mt-2 text-white">
       <p className="mb-4">
         <strong>Sri Sai Caterers</strong> are the experts in <strong>Suchitra, Hyderabad</strong>, for all your culinary needs! 
         We are more than just catering services and offer a wide range of outdoor Veg and Non-Veg catering at a reasonable price.

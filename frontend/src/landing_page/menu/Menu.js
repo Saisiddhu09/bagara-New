@@ -3,7 +3,7 @@ import './Menu.css'
 
 const Menu = () => {
   return (
-    <div className="menu-container text-white mt-5">
+    <div className="menu-container bg-dark bg-opacity-50 text-white mt-5">
     <div className="d-flex justify-content-center text-white align-items-center gap-4 p-4 mt-5">
       {/* Veg Menu */}
       <Link to="/menu/veg" className="text-decoration-none text-center">

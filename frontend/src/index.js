@@ -15,6 +15,7 @@ import NonVeg from "./landing_page/menu/NonVeg";
 import ScrollToTop from "./ScrollToTop";
 import Popup from "./landing_page/PopUp";
 
+
 const App = () => {
   const location = useLocation();
   const [showPopup, setShowPopup] = useState(false);
@@ -32,6 +33,7 @@ const App = () => {
 
   return (
     <div className="app-container">
+     
       <ScrollToTop />
       <Navbar />
       
@@ -39,6 +41,7 @@ const App = () => {
       {showPopup && <Popup message="You switched pages!" onClose={() => setShowPopup(false)} />}
 
       <Routes>
+        
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutSection />} />
         <Route path="/menu" element={<MenuSection />} />

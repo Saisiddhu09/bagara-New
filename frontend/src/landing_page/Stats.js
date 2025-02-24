@@ -35,7 +35,7 @@ const Counter = ({ target }) => {
 
 const Stats = () => {
   return (
-    <div className="stats-container mt-2 mb-2">
+    <div className="stats-container bg-dark bg-opacity-50 mt-2 mb-2">
     
       
       {statsData.map((stat, index) => (

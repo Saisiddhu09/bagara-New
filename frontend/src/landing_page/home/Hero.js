@@ -30,7 +30,7 @@ const Hero = () => {
 
             {/* Right Section - Form */}
             <div className="col-md-6 text-center bg-light p-4 rounded text-dark">
-              <h2>Register Now</h2>
+              <h2>Message Us Now!</h2>
               <form>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Full Name:</label>

@@ -1,26 +1,14 @@
 import React from "react";
-
+import './Feedback.css'
 const Feedback = () => {
   return (
     <div>
-      <div className="container d-flex justify-content-center align-items-center vh-50">
+      <div className="container d-flex bg-dark bg-opacity-50 justify-content-center align-items-center vh-50">
       
      
       
-     <img 
-       src="/media/images/bg1.png" 
-       alt="Background" 
-       style={{
-         
-         top: 100,
-         left: 0,
-         width: "100%",
-         height: "100%",
-         
-         zIndex: -1  // Sends the image behind other content
-       }}
-     />
-        <div className="row text-center mt-5 mb-5">
+     
+        <div className="text-container row text-center mt-5 mb-5">
           <h1>Why Choose Us?</h1>
           <p>
             <strong>Vaaraahi Caterers</strong> has over <strong>30 years of experience</strong> in the food catering industry in <strong>Hyderabad, Telangana</strong>. 

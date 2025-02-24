@@ -9,4 +9,10 @@
   max-height: 500px; /* Adjust as needed */
   margin: auto; /* Center it */
   padding: 20px; /* Adjust padding */
+ 
+}
+@media (max-width: 768px) {
+  .menu-container{
+    padding-bottom: 400px;
+  }
 }

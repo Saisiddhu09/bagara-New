@@ -1,5 +1,6 @@
 import React from "react";
 import './Footer.css'
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
 
@@ -37,18 +38,27 @@ const Footer = () => {
             <h4 className="mb-4 text-center">Quick Links</h4>
             <div className="d-flex justify-content-between">
               <ul className="list-unstyled">
-                <li><a href="#" className="text-light">Services</a></li>
-                <li><a href="#" className="text-light">Order Now</a></li>
-                <li><a href="#" className="text-light">Our Menu</a></li>
-                <li><a href="#" className="text-light">Our Menu QR</a></li>
-                <li><a href="#" className="text-light">House Party Food</a></li>
-                <li><a href="#" className="text-light">Catering</a></li>
+                <li>
+                <Link className="nav-link" to="/services">
+                              Services
+                            </Link>
+                            </li>
+                <li><Link className="nav-link" to="/">
+                              Order Now
+                            </Link></li>
+                <li><Link className="nav-link" to="/menu">
+                              Our Menu
+                            </Link></li>
+                
               </ul>
               <ul className="list-unstyled">
-                <li><a href="#" className="text-light">Veg Menu</a></li>
-                <li><a href="#" className="text-light">Non Veg Menu</a></li>
-                <li><a href="#" className="text-light">New Year Party</a></li>
-                <li><a href="#" className="text-light">Privacy Policy</a></li>
+                <li><Link className="nav-link" to="/menu/veg">
+                              Veg Menu
+                            </Link></li>
+                <li><Link className="nav-link" to="/menu/nonveg">
+                             Non Veg Menu
+                            </Link></li>
+                
               </ul>
             </div>
           </div>

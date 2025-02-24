@@ -7,7 +7,7 @@ const Popup = ({ message, onClose }) => {
   return (
     <div className="popup-overlay">
       <div className="popup-box">
-      <h2>Register Now</h2>
+      <h2>Get into Contact!</h2>
               <form>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">

@@ -4,7 +4,7 @@ import './Navbar.css'
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-5 py-1 fixed-top">
+    <nav className="navbar navbar-expand-sm navbar-dark bg-dark mb-3 py-0 fixed-top">
      <div className="container-fluid d-flex align-items-center justify-content-between">
 
       <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -15,7 +15,7 @@ const Navbar = () => {
     style={{ width: "140px", maxHeight: "60px", objectFit: "contain" }}
   />
 </Link>
-      <div className="text-white fw-bold pe-3 d-sm-block">📞 +91 98765 43210</div>
+      
 
       <button
         className="navbar-toggler"
