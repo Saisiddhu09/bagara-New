@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, HashRouter } from "react-router-dom";
 import HomePage from "./landing_page/home/HomePage";
 import AboutSection from "./landing_page/about/AboutSection";
 import MenuSection from "./landing_page/menu/MenuSection";
@@ -14,21 +14,20 @@ import Veg from "./landing_page/menu/Veg";
 import NonVeg from "./landing_page/menu/NonVeg";
 import ScrollToTop from "./ScrollToTop";
 import Popup from "./landing_page/PopUp";
-import { HashRouter } from "react-router-dom";
 import Birthday from "./landing_page/services/Birthday";
 import Corporate from "./landing_page/services/Corporate";
 import Cultural from "./landing_page/services/Cultural";
 import House from "./landing_page/services/House";
 import Wedding from "./landing_page/services/Wedding";
 import ServicePage from "./landing_page/services/ServicesPage";
-import AdminLogin from "./Admin/AdminLogin.js";  // Import Admin Login Page
-import Orders from "./Admin/Orders.js"; // Import Admin Dashboard
+import AdminLogin from "./Admin/AdminLogin";
+import Admin from "./Admin/Admin";
 
 const App = () => {
   const location = useLocation();
   const [showPopup, setShowPopup] = useState(false);
 
-  // Hide components on admin pages
+  // Check if the current route is an admin page
   const isAdminPage = location.pathname.startsWith("/admin");
 
   useEffect(() => {
@@ -69,8 +68,9 @@ const App = () => {
 
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin" element={<Orders />} />
+        <Route path="/admin" element={<Admin />} />
 
+        {/* Catch-all Route for 404 Pages */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 

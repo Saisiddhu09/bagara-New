@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const FormSubmissionSchema = new mongoose.Schema({
-  name: String,
+  fullName: String,   // Rename from "name"
   email: String,
-  number: String,
+  phone: String,      // Rename from "number"
   message: String,
   submittedAt: { type: Date, default: Date.now },
 });

@@ -30,7 +30,7 @@ const Hero = () => {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus({ type: "success", message: "Form submitted successfully!" });
+        setStatus({ type: "success", message: "We Will Contact You Soon!" });
         setFormData({ name: "", email: "", number: "", message: "" }); // Reset form
       } else {
         setStatus({ type: "error", message: data.error || "Submission failed." });
