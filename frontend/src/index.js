@@ -15,6 +15,12 @@ import NonVeg from "./landing_page/menu/NonVeg";
 import ScrollToTop from "./ScrollToTop";
 import Popup from "./landing_page/PopUp";
 import { HashRouter } from "react-router-dom";
+import Birthday from "./landing_page/services/Birthday";
+import Corporate from "./landing_page/services/Corporate";
+import Cultural from "./landing_page/services/Cultural";
+import House from "./landing_page/services/House";
+import Wedding from "./landing_page/services/Wedding";
+import ServicePage from "./landing_page/services/ServicesPage";
 
 
 
@@ -52,6 +58,15 @@ import { HashRouter } from "react-router-dom";
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/menu/veg" element={<Veg />} />
         <Route path="/menu/nonveg" element={<NonVeg />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/services/birthday" element={<Birthday />} />
+        <Route path="/services/corporate" element={<Corporate />} />
+        <Route path="/services/cultural" element={<Cultural />} />
+        <Route path="/services/house" element={<House />} />
+        <Route path="/services/wedding" element={<Wedding />} />
+
+
+
         <Route path="*" element={<NotFound />} />
       </Routes>
 

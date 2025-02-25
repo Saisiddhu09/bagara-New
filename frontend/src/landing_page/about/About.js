@@ -17,7 +17,7 @@ const About = () => {
         <div className="col-md-6">
           <h3>30 Years Of Experience In Catering Services</h3>
           <p>
-            Vaaraahi Caterers is an expert outdoor catering service provider in Hyderabad.
+           Sri Sai Caterers are an expert outdoor catering service provider in Hyderabad.
             We serve events from small to large crowds with the most comfortable buffet setups at your location.
             Be it a family reunion, colleagues gathering, family function, Indian wedding, birthday, housewarming,
             cradle ceremony, or anniversaries, we are just a call away. From welcome drinks to non-veg specials,

@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} id="navbarSupportedContent">
           <ul className="navbar-nav mx-auto text-center gap-4">
             <li className="nav-item">
-              <Link className="nav-link active" to="/" onClick={closeMenu}>
+              <Link className="nav-link" to="/" onClick={closeMenu}>
                 Home
               </Link>
             </li>
@@ -57,33 +57,12 @@ const Navbar = () => {
                 Menu
               </Link>
             </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link dropdown-toggle"
-                to="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Services
+            <li className="nav-item">
+              <Link className="nav-link" to="/services" onClick={closeMenu}>
+               Services
               </Link>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="#" onClick={closeMenu}>
-                  Wedding Catering
-                </Link>
-                <Link className="dropdown-item" to="#" onClick={closeMenu}>
-                  Birthday Party Catering
-                </Link>
-                <Link className="dropdown-item" to="#" onClick={closeMenu}>
-                  Cultural Event Catering
-                </Link>
-                <Link className="dropdown-item" to="#" onClick={closeMenu}>
-                  House Warming Catering
-                </Link>
-              </div>
             </li>
+           
           </ul>
         </div>
       </div>

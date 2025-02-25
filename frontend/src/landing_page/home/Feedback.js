@@ -11,8 +11,9 @@ const Feedback = () => {
         <div className="text-container row text-center mt-5 mb-5">
           <h1>Why Choose Us?</h1>
           <p>
-            <strong>Vaaraahi Caterers</strong> has over <strong>30 years of experience</strong> in the food catering industry in <strong>Hyderabad, Telangana</strong>. 
-            We specialize in providing <strong>high-quality catering services</strong> near <strong>KPHB, Kukatpally, and Gachibowli</strong>, ensuring 
+            <strong>Sri Sai Caterers</strong> has over <strong>30 years of experience</strong> in the food catering industry in <strong>Hyderabad, Telangana</strong>. 
+            We specialize in providing <strong>high-quality catering services</strong> near <strong>Suchitra,Quthbullapur,Bowenpally,Kompally
+            </strong>, ensuring 
             that your events are complemented with <strong>delicious and hygienic meals</strong>. Our philosophy is simple: 
             <strong>"Good Food Builds Good Relations."</strong>
           </p>
@@ -30,7 +31,7 @@ const Feedback = () => {
             <div className="col-6 text-start">
               <p>
                 At <strong>Sri Sai Caterers</strong>, we take pride in being one of the <strong>premium outdoor catering services</strong> in <strong>Hyderabad</strong>. 
-                Located near <strong>Pipeline Road, Suchitra</strong>, our services extend to major areas such as <strong>Kompally, Alwal, Bowenpally, and beyond</strong>. 
+                Located near <strong>Quthbullapur</strong>, our services extend to major areas such as <strong>Kompally, Alwal, Bowenpally,Suchitra and beyond</strong>. 
                 Whether you're hosting an <strong>intimate family gathering</strong> or a <strong>large corporate event</strong>, our catering team ensures a <strong>seamless dining experience</strong>.
               </p>
 
