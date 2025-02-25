@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bagara-New/static/css/main.4154ad7e.css",
-    "main.js": "/bagara-New/static/js/main.e69ac039.js",
+    "main.js": "/bagara-New/static/js/main.ad466b6d.js",
     "index.html": "/bagara-New/index.html",
     "main.4154ad7e.css.map": "/bagara-New/static/css/main.4154ad7e.css.map",
-    "main.e69ac039.js.map": "/bagara-New/static/js/main.e69ac039.js.map"
+    "main.ad466b6d.js.map": "/bagara-New/static/js/main.ad466b6d.js.map"
   },
   "entrypoints": [
     "static/css/main.4154ad7e.css",
-    "static/js/main.e69ac039.js"
+    "static/js/main.ad466b6d.js"
   ]
 }
