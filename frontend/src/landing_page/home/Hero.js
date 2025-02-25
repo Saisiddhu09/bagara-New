@@ -1,18 +1,54 @@
-import React from "react";
-import './Hero.css';
+import React, { useState } from "react";
+import "./Hero.css";
 
 const Hero = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState(null); // To show success/error message
+
+  // Handle input change
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch("http://localhost:8000/api/forms/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ type: "success", message: "Form submitted successfully!" });
+        setFormData({ name: "", email: "", number: "", message: "" }); // Reset form
+      } else {
+        setStatus({ type: "error", message: data.error || "Submission failed." });
+      }
+    } catch (error) {
+      setStatus({ type: "error", message: "Something went wrong. Try again later." });
+    }
+  };
+
   return (
     <div className="container-fluid position-relative">
       <div className="parent-container">
-      <img
-        src={`${process.env.PUBLIC_URL}/media/images/serving.webp`}
-        alt="Background"
-        className="hero-bg"
-      />
+        <img
+          src={`${process.env.PUBLIC_URL}/media/images/serving.webp`}
+          alt="Background"
+          className="hero-bg"
+        />
       </div>
-      {/* Background Image */}
-      
 
       {/* Content Overlay */}
       <div className="hero-content">
@@ -31,22 +67,60 @@ const Hero = () => {
             {/* Right Section - Form */}
             <div className="col-md-6 text-center bg-light p-4 rounded text-dark">
               <h2>Message Us Now!</h2>
-              <form>
+
+              {status && (
+                <div className={`alert ${status.type === "success" ? "alert-success" : "alert-danger"}`} role="alert">
+                  {status.message}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <label htmlFor="name" className="form-label">Full Name:</label>
-                  <input type="text" id="name" name="name" className="form-control" required />
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="form-control"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="email" className="form-label">Email:</label>
-                  <input type="email" id="email" name="email" className="form-control" required />
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="form-control"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="number" className="form-label">Phone Number:</label>
-                  <input type="number" id="number" name="number" className="form-control" required />
+                  <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    className="form-control"
+                    value={formData.number}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="mb-3">
                   <label htmlFor="message" className="form-label">Message:</label>
-                  <textarea id="message" name="message" className="form-control" required></textarea>
+                  <textarea
+                    id="message"
+                    name="message"
+                    className="form-control"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
                 </div>
                 <button type="submit" className="btn text-dark fw-bold px-4 py-2 rounded-3 border-0" style={{ backgroundColor: "#d9b99b" }}>
                   Send Message
