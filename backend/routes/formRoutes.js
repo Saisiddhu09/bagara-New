@@ -8,8 +8,8 @@ const config = require("../config.json");
 
 // Dummy admin credentials (Replace with DB-based authentication if needed)
 const adminUser = {
-  username: "admin@gmail.com",
-  password: bcrypt.hashSync("admin123", 10), // Pre-hashed password
+  username: process.env.USER,
+  password: bcrypt.hashSync(process.env.PASS, 10), // Pre-hashed password
 };
 
 // Admin Login Route
