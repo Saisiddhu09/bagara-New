@@ -15,7 +15,7 @@ const Orders = () => {
       return;
     }
 
-    fetch("http://localhost:8000/api/forms/orders", {
+    fetch(`${process.env.REACT_APP_BACKEND_BASEURL}/api/forms/orders`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

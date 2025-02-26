@@ -18,7 +18,7 @@ const Popup = ({ message, onClose }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8000/api/forms/submit", {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_BASEURL}/api/forms/submit`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

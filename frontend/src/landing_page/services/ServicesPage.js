@@ -25,7 +25,7 @@ const ServicePage = () => {
           <p className="service-description">
             Sri Sai Caterers is a acclaimed wedding caterer in Quthbullapur and Suchitra. With around 10 years of catering experience
           </p>
-          <Link to="/services/wedding" className="btn btn-gold">CLICK HERE →</Link>
+          
         </div>
 
         <div className="service-item">
@@ -40,7 +40,7 @@ const ServicePage = () => {
           <p className="service-description pb-4">
           Sri Sai Caterers, an esteemed caterer in Hyderabad, has now added birthday parties to their services.
           </p>
-          <Link to="/services/birthday" className="btn btn-gold">CLICK HERE →</Link>
+          
         
         </div>
 
@@ -56,7 +56,7 @@ const ServicePage = () => {
           <p className="service-description">
             Whether its lunch, breakfast, snacks, or dinner, we provide top-notch Cultural events catering services to meet any special dietary
           </p>
-          <Link to="/services/cultural" className="btn btn-gold">CLICK HERE →</Link>
+          
         </div>
 
         {/* Second row */}
@@ -72,7 +72,7 @@ const ServicePage = () => {
           <p className="service-description">
             Every home is a unique story, and your housewarming Catering should reflect it. At Sri Sai Caterers
           </p>
-          <Link to="/services/house" className="btn btn-gold">CLICK HERE →</Link>
+          
         </div>
 
         <div className="service-item">
@@ -87,7 +87,7 @@ const ServicePage = () => {
           <p className="service-description">
             At Sri Sai Caterers, Whether it's a corporate lunch, a high-profile executive event, or a milestone celebration
           </p>
-          <Link to="/services/coorporate" className="btn btn-gold">CLICK HERE →</Link>
+          
         </div>
       </div>
     </div>
