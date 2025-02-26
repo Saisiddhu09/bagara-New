@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const router = express.Router();
 const FormSubmission = require("../models/FormSubmission");
 const authMiddleware = require("../middleware/authMiddleware");
-const config = require("../config.json");
+require("dotenv").config(); 
 
 // Dummy admin credentials (Replace with DB-based authentication if needed)
 const adminUser = {
