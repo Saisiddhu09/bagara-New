@@ -21,7 +21,7 @@ router.post("/admin/login", async (req, res) => {
   }
 
   // Updated token payload to include role: "admin"
-  const token = jwt.sign({ username, role: "admin" }, config.jwtSecret, { expiresIn: "1h" });
+  const token = jwt.sign({ username, role: "admin" }, process.env.JWT_SECRET, { expiresIn: "1h" });
   res.json({ token });
 });
 

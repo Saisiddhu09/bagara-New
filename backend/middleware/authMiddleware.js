@@ -10,7 +10,7 @@ const authMiddleware = (req, res, next) => {
 
     try {
         const cleanToken = token.replace("Bearer ", ""); // Ensure token is clean
-        const decoded = jwt.verify(cleanToken, config.jwtSecret);
+        const decoded = jwt.verify(cleanToken, process.env.JWT_SECRET);
 
         if (decoded.role !== "admin") {
             return res.status(403).json({ message: "Forbidden: Admins only." });
