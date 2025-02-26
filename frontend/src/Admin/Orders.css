@@ -1,6 +1,4 @@
-/* Orders.css */
-
-/* Full-screen background wrapper, similar to the login page */
+/* Full-screen background wrapper */
 .orders-page-wrapper {
   min-height: 100vh;
   background: linear-gradient(to right, #8e44ad, #3498db);
@@ -10,17 +8,19 @@
   padding: 20px;
 }
 
-/* Orders container styled similar to the login box */
+/* Orders container */
 .orders-container {
   width: 90%;
   max-width: 1200px;
   background-color: #ffffff;
-  padding: 40px;
+  padding: 30px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin: 0 auto;
+  overflow-x: auto; /* Prevents table overflow */
 }
 
+/* Header */
 .orders-header {
   text-align: center;
   margin-bottom: 20px;
@@ -28,27 +28,31 @@
   color: #333;
 }
 
-/* Logout button styled to match the login button */
+/* Logout button */
 .logout-button {
   background-color: #3498db;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  margin-bottom: 20px;
+  padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto 20px;
 }
 
 .logout-button:hover {
   background-color: #2980b9;
+  transform: scale(1.05);
 }
 
-/* Orders table styling */
+/* Orders table */
 .orders-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  min-width: 600px; /* Prevents extreme shrinkage */
 }
 
 .orders-table th,
@@ -56,44 +60,66 @@
   padding: 12px 15px;
   border: 1px solid #ddd;
   text-align: left;
+  word-break: break-word; /* Ensures text wraps */
+  white-space: normal;
+  max-width: 250px;
 }
 
 .orders-table thead {
   background-color: #f2f2f2;
+  font-weight: bold;
 }
 
 .orders-table tbody tr:hover {
   background-color: #f9f9f9;
 }
 
-/* Responsive styling for smaller screens */
+/* Responsive Table for Smaller Screens */
 @media (max-width: 768px) {
-  .orders-table, 
-  .orders-table thead, 
-  .orders-table tbody, 
-  .orders-table th, 
-  .orders-table td, 
-  .orders-table tr {
-    display: block;
+  .orders-container {
+    padding: 20px;
+    overflow-x: auto; /* Allow horizontal scrolling */
   }
-  
-  .orders-table tr {
+
+  .orders-table {
+    width: 100%;
+    border: 0;
+  }
+
+  .orders-table thead {
+    display: none;
+  }
+
+  .orders-table tbody tr {
+    display: block;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
   }
-  
+
   .orders-table td {
-    text-align: right;
-    padding-left: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
     position: relative;
+    text-align: right;
+    max-width: 75%;
   }
-  
+
   .orders-table td::before {
     content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 45%;
-    padding-left: 15px;
     font-weight: bold;
+    color: #333;
     text-align: left;
+  }
+
+  /* Prevents extreme name/email overlap */
+  .orders-table td.name,
+  .orders-table td.email {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
   }
 }
