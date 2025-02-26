@@ -1,0 +1,66 @@
+/* AdminLogin.css */
+
+.admin-login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #8e44ad, #3498db);
+    padding: 20px;
+  }
+  
+  .admin-login-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .admin-login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .admin-login-box form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-login-box form input {
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .admin-login-box form input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .admin-login-box form button {
+    height: 45px;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .admin-login-box form button:hover {
+    background: #2980b9;
+  }
+  
+  .admin-login-box p.error {
+    color: #e74c3c;
+    margin-bottom: 15px;
+  }
+  

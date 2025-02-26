@@ -1,3 +1,4 @@
 {
-    "connectionString":"mongodb+srv://testuser:testuser123@bagaraapp.c6tlx.mongodb.net/?retryWrites=true&w=majority&appName=Bagaraapp"
+    "connectionString":"mongodb+srv://testuser:testuser123@bagaraapp.c6tlx.mongodb.net/?retryWrites=true&w=majority&appName=Bagaraapp",
+    "jwtSecret": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 }

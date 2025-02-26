@@ -3,12 +3,12 @@ import "./Hero.css";
 
 const Hero = () => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
-    number: "",
+    phone: "",
     message: "",
   });
-
+  
   const [status, setStatus] = useState(null); // To show success/error message
 
   // Handle input change
@@ -31,7 +31,8 @@ const Hero = () => {
 
       if (response.ok) {
         setStatus({ type: "success", message: "We Will Contact You Soon!" });
-        setFormData({ name: "", email: "", number: "", message: "" }); // Reset form
+        // Reset form using the correct keys
+        setFormData({ fullName: "", email: "", phone: "", message: "" });
       } else {
         setStatus({ type: "error", message: data.error || "Submission failed." });
       }
@@ -76,13 +77,13 @@ const Hero = () => {
 
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label">Full Name:</label>
+                  <label htmlFor="fullName" className="form-label">Full Name:</label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="fullName"
+                    name="fullName"
                     className="form-control"
-                    value={formData.name}
+                    value={formData.fullName}
                     onChange={handleChange}
                     required
                   />
@@ -100,13 +101,13 @@ const Hero = () => {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="number" className="form-label">Phone Number:</label>
+                  <label htmlFor="phone" className="form-label">Phone Number:</label>
                   <input
                     type="number"
-                    id="number"
-                    name="number"
+                    id="phone"
+                    name="phone"
                     className="form-control"
-                    value={formData.number}
+                    value={formData.phone}
                     onChange={handleChange}
                     required
                   />
@@ -122,7 +123,11 @@ const Hero = () => {
                     required
                   ></textarea>
                 </div>
-                <button type="submit" className="btn text-dark fw-bold px-4 py-2 rounded-3 border-0" style={{ backgroundColor: "#d9b99b" }}>
+                <button 
+                  type="submit" 
+                  className="btn text-dark fw-bold px-4 py-2 rounded-3 border-0" 
+                  style={{ backgroundColor: "#d9b99b" }}
+                >
                   Send Message
                 </button>
               </form>

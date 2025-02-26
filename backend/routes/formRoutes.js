@@ -1,8 +1,31 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcryptjs");
 const router = express.Router();
 const FormSubmission = require("../models/FormSubmission");
+const authMiddleware = require("../middleware/authMiddleware");
+const config = require("../config.json");
 
-// Submit a form
+// Dummy admin credentials (Replace with DB-based authentication if needed)
+const adminUser = {
+  username: "admin@gmail.com",
+  password: bcrypt.hashSync("admin123", 10), // Pre-hashed password
+};
+
+// Admin Login Route
+router.post("/admin/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  if (username !== adminUser.username || !bcrypt.compareSync(password, adminUser.password)) {
+    return res.status(401).json({ message: "Invalid credentials" });
+  }
+
+  // Updated token payload to include role: "admin"
+  const token = jwt.sign({ username, role: "admin" }, config.jwtSecret, { expiresIn: "1h" });
+  res.json({ token });
+});
+
+// Submit a form (No authentication required)
 router.post("/submit", async (req, res) => {
   try {
     const newSubmission = new FormSubmission(req.body);
@@ -14,8 +37,8 @@ router.post("/submit", async (req, res) => {
   }
 });
 
-// Fetch all form submissions
-router.get("/", async (req, res) => {
+// Fetch all form submissions (Admin-only access)
+router.get("/orders", authMiddleware, async (req, res) => {
   try {
     const submissions = await FormSubmission.find();
     res.json(submissions);

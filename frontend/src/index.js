@@ -21,7 +21,8 @@ import House from "./landing_page/services/House";
 import Wedding from "./landing_page/services/Wedding";
 import ServicePage from "./landing_page/services/ServicesPage";
 import AdminLogin from "./Admin/AdminLogin";
-import Admin from "./Admin/Admin";
+import Admin from "./Admin/Orders";
+import Orders from "./Admin/Orders";
 
 const App = () => {
   const location = useLocation();
@@ -67,8 +68,8 @@ const App = () => {
         <Route path="/services/wedding" element={<Wedding />} />
 
         {/* Admin Routes */}
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route path="/admin/orders" element={<Orders />} />
 
         {/* Catch-all Route for 404 Pages */}
         <Route path="*" element={<NotFound />} />
