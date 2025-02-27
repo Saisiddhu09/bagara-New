@@ -19,7 +19,7 @@ mongoose
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL, // Allow frontend access
+    origin: "*", // Allow frontend access
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"], // Ensure JWT can be sent in headers
   })
