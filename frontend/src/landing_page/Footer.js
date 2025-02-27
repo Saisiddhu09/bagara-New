@@ -17,7 +17,7 @@ const Footer = () => {
               style={{ maxWidth: "150px" }}
             />
             <p className="mt-3">
-              Sri Sai Caterers is the best and premium leading catering service
+              Bheemas Kitchen is the best and premium leading catering service
               in Hyderabad. We cater to all types of
               occasions and events at the best prices.
             </p>
@@ -30,7 +30,7 @@ const Footer = () => {
               <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
-            <p className="mt-3">2025 Sri Sai Caterers. All Rights Reserved.</p>
+            <p className="mt-3">2025 Bheemas Kitchen. All Rights Reserved.</p>
           </div>
 
           {/* Middle Section - Quick Links */}
@@ -72,11 +72,11 @@ const Footer = () => {
             </p>
             <p>
             <i className="fa fa-phone me-1" aria-hidden="true"></i>
-              +91 8367444488
+              +91 9700888257
             </p>
             <p>
               <i className="fas fa-clock text-warning me-2"></i>
-              08 am - 06 pm
+              08 am - 08 pm
             </p>
           </div>
         </div>

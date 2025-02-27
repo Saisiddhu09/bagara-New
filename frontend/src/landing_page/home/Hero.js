@@ -57,7 +57,7 @@ const Hero = () => {
           <div className="row align-items-center">
             {/* Left Section */}
             <div className="col-md-6 bg-dark bg-opacity-50 p-4 rounded-3 text-center">
-              <h1>Sri Sai Caterers provide best Food Catering Services in Hyderabad</h1>
+              <h1>Bheemas Kitchen provide best Food Catering Services in Hyderabad</h1>
               <p>
                 Get premium quality food catering services nearby you at an affordable price.
                 Enjoy a wide range of delicious and hygienic dishes crafted by expert chefs.

@@ -15,9 +15,9 @@ const About = () => {
       
       <div className="row align-items-center">
         <div className="col-md-6">
-          <h3>30 Years Of Experience In Catering Services</h3>
+          <h3>10 Years Of Experience In Catering Services</h3>
           <p>
-           Sri Sai Caterers are an expert outdoor catering service provider in Hyderabad.
+            Bheemas Kitchen are an expert outdoor catering service provider in Hyderabad.
             We serve events from small to large crowds with the most comfortable buffet setups at your location.
             Be it a family reunion, colleagues gathering, family function, Indian wedding, birthday, housewarming,
             cradle ceremony, or anniversaries, we are just a call away. From welcome drinks to non-veg specials,
@@ -41,7 +41,7 @@ const About = () => {
 
               <span className="heart-icon text-danger fs-3 me-2">❤️</span>
               <div>
-                <h4 className="mb-0">20000+</h4>
+                <h4 className="mb-0">100000+</h4>
                 <p className="text-muted">Satisfied Customers</p>
               </div>
             </div>

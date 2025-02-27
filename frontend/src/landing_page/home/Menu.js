@@ -12,7 +12,7 @@ const Menu = () => {
 
           <h1>Choose Your Menu</h1>
           <p>
-            Sri Sai Caterers' menus are designed to provide the best level of
+            Bheemas Kitchen's menus are designed to provide the best level of
             comfort for our customer's food needs. We offer a range of
             customizable Veg and Non-Veg menu options in addition to the pre-set
             menus

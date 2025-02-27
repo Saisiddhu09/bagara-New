@@ -23,7 +23,7 @@ const ServicePage = () => {
           </div>
           <h2 className="service-title">Wedding Catering</h2>
           <p className="service-description">
-            Sri Sai Caterers is a acclaimed wedding caterer in Quthbullapur and Suchitra. With around 10 years of catering experience
+          Bheemas Kitchen is a acclaimed wedding caterer in Quthbullapur and Suchitra. With around 10 years of catering experience
           </p>
           
         </div>
@@ -38,7 +38,7 @@ const ServicePage = () => {
           </div>
           <h2 className="service-title">Birthday Party Catering</h2>
           <p className="service-description pb-4">
-          Sri Sai Caterers, an esteemed caterer in Hyderabad, has now added birthday parties to their services.
+          Bheemas Kitchen, an esteemed caterer in Hyderabad, has now added birthday parties to their services.
           </p>
           
         
@@ -70,7 +70,7 @@ const ServicePage = () => {
           </div>
           <h2 className="service-title">House Warming Caterers</h2>
           <p className="service-description">
-            Every home is a unique story, and your housewarming Catering should reflect it. At Sri Sai Caterers
+            Every home is a unique story, and your housewarming Catering should reflect it. At Bheemas Kitchen
           </p>
           
         </div>
@@ -85,7 +85,7 @@ const ServicePage = () => {
           </div>
           <h2 className="service-title">Corporate Catering</h2>
           <p className="service-description">
-            At Sri Sai Caterers, Whether it's a corporate lunch, a high-profile executive event, or a milestone celebration
+            At Bheemas Kitchen, Whether it's a corporate lunch, a high-profile executive event, or a milestone celebration
           </p>
           
         </div>
