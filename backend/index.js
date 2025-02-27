@@ -17,15 +17,13 @@ mongoose
 
 // **Middleware**
 app.use(express.json());
-app.use(cors({ origin: '*', methods: 'GET,POST,PUT,DELETE,OPTIONS' }));
-
-// Handle preflight requests
-app.options('*', (req, res) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  res.sendStatus(204);
-});
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL, // Allow frontend access
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"], // Ensure JWT can be sent in headers
+  })
+);
 
 // **Use form routes**
 app.use("/api/forms", formRoutes);
