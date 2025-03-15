@@ -37,6 +37,7 @@ router.post("/submit", async (req, res) => {
   }
 });
 
+
 // Fetch all form submissions (Admin-only access)
 router.get("/orders", authMiddleware, async (req, res) => {
   try {
@@ -45,6 +46,21 @@ router.get("/orders", authMiddleware, async (req, res) => {
   } catch (err) {
     console.error("Error fetching submissions:", err);
     res.status(500).json({ error: "Error fetching submissions" });
+  }
+});
+router.delete("/orders/:id", authMiddleware, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const deletedSubmission = await FormSubmission.findByIdAndDelete(id);
+
+    if (!deletedSubmission) {
+      return res.status(404).json({ error: "Form submission not found" });
+    }
+
+    res.json({ message: "Form submission deleted successfully" });
+  } catch (err) {
+    console.error("Error deleting submission:", err);
+    res.status(500).json({ error: "Error deleting submission" });
   }
 });
 

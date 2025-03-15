@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: '*', // Allow frontend access
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST","DELETE", "PUT"],
     allowedHeaders: ["Content-Type", "Authorization"], // Ensure JWT can be sent in headers
   })
 );
