@@ -80,6 +80,34 @@
     border-radius: 4px;
     transition: background-color 0.3s;
   }
+  /* Button Styling */
+.buttonn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: #ff6600; /* Vibrant orange */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hover Effect */
+.buttonn:hover {
+  background-color: #e55b00; /* Darker orange */
+  transform: scale(1.05); /* Slightly enlarges */
+}
+
+/* Button Alignment */
+.service-item {
+  text-align: center;
+}
+
   
   .service-button:hover {
     background-color: #555;
