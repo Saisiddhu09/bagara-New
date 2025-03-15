@@ -23,6 +23,12 @@ import ServicePage from "./landing_page/services/ServicesPage";
 import AdminLogin from "./Admin/AdminLogin";
 import Admin from "./Admin/Orders";
 import Orders from "./Admin/Orders";
+import GalleryPage from "./landing_page/gallery/galleryPage";
+import Privacy from "./landing_page/privacy";
+import Page from "./landing_page/Page";
+
+
+
 
 const App = () => {
   const location = useLocation();
@@ -66,6 +72,10 @@ const App = () => {
         <Route path="/services/cultural" element={<Cultural />} />
         <Route path="/services/house" element={<House />} />
         <Route path="/services/wedding" element={<Wedding />} />
+        <Route path="/gallery" element={<GalleryPage/>} />
+        <Route path="/privacy-policy" element={<Privacy/>} />
+        <Route path="/license" element={<Page/>} />
+        
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLogin />} />

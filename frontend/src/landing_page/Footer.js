@@ -23,10 +23,9 @@ const Footer = () => {
             </p>
             {/* Social Icons */}
             <div className="d-flex gap-3 justify-content-center justify-content-md-start">
-              <a href="https://www.facebook.com/" className="text-light fs-4">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.instagram.com/" className="text-light fs-4">
+              
+              
+              <a href="https://www.instagram.com/flavours.of.bagara?igsh=NmsxdWs2Y3E1Nndj" className="text-light fs-4">
               <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
@@ -57,6 +56,12 @@ const Footer = () => {
                             </Link></li>
                 <li><Link className="nav-link" to="/menu/nonveg">
                              Non Veg Menu
+                            </Link></li>
+                            <li><Link className="nav-link" to="/privacy-policy">
+                              Privacy Policy
+                            </Link></li>
+                            <li><Link className="nav-link" to="/license">
+                              Food Licnese
                             </Link></li>
                 
               </ul>
