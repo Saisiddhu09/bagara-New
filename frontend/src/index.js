@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import { Routes, Route, useLocation, HashRouter } from "react-router-dom";
+import { Routes, Route, useLocation, HashRouter, BrowserRouter } from "react-router-dom";
 import HomePage from "./landing_page/home/HomePage";
 import AboutSection from "./landing_page/about/AboutSection";
 import MenuSection from "./landing_page/menu/MenuSection";
@@ -96,7 +96,7 @@ const App = () => {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HashRouter>
+  <BrowserRouter>
     <App />
-  </HashRouter>
+    </BrowserRouter>
 );
