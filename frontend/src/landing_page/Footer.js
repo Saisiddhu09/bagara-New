@@ -73,11 +73,15 @@ const Footer = () => {
             <h4 className="mb-4">Contact</h4>
             <p>
             <i className="fa fa-envelope-o me-1" aria-hidden="true"></i>
-              example@gmail.com
+              bheemasskitchen@gmail.com
             </p>
             <p>
             <i className="fa fa-phone me-1" aria-hidden="true"></i>
               +91 9700888257
+            </p>
+            <p>
+            <i className="fa fa-phone me-1" aria-hidden="true"></i>
+              +91 9246366693
             </p>
             <p>
               <i className="fas fa-clock text-warning me-2"></i>
